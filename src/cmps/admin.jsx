@@ -2,7 +2,9 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000"); // change to Render URL when deployed
+//    10.0.0.6
+// const socket = io("http://localhost:5000"); // change to Render URL when deployed
+const socket = io("http://10.0.0.6:5000");
 
 function Admin() {
     const [players, setPlayers] = useState([]);
