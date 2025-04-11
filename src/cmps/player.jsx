@@ -72,6 +72,7 @@ function Player() {
             socket.emit("join_game", username.trim());
             setJoined(true);
             playSound("join");
+            window.scrollTo({ top: 0, behavior: "smooth" });
         }
     };
 
