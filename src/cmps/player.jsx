@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import Slide from "./slide";
 
-const socket = io("http://localhost:5000");
+// const socket = io("http://localhost:5000");
+const socket = io("https://passoverquiz.onrender.com");
 
 function Player() {
     const [username, setUsername] = useState("");
