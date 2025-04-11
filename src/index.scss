@@ -1,0 +1,211 @@
+$card-bgc: #f1faee;
+$font-color: #1d3557;
+$dark-blue: #457b9d;
+$light-blue: #a8dadc;
+$red-color: #e63946;
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    all: unset;
+    font-weight: 600;
+}
+
+html {
+    color: $font-color !important;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../public/img/bgc.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: auto;
+    min-height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+    color: $font-color;
+    direction: rtl;
+}
+
+input,
+button {
+    color: $font-color;
+    background-color: $card-bgc;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: 4px solid $font-color;
+}
+
+p {
+    line-height: 1.5;
+    > br:not(:last-child) {
+        content: "";
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.startgame-form-item {
+    padding: 4px;
+    border: 1px solid $dark-blue;
+    margin-bottom: 10px;
+    background-color: $card-bgc;
+    color: $font-color;
+}
+
+.card-container {
+    background-color: $card-bgc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header- {
+    &title {
+        font-weight: 600;
+    }
+    &container {
+        background-color: $card-bgc;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+    &.column {
+        flex-direction: column;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.center-center {
+        justify-content: center;
+        align-items: center;
+    }
+    &.flex-end {
+        justify-content: flex-end;
+    }
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.option-button {
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid $font-color;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-button:disabled {
+    cursor: default;
+    pointer-events: none; /* Still prevents clicking */
+    filter: none;
+}
+
+.option-button.wrong {
+    border-color: $red-color;
+    color: $red-color;
+    font-weight: 600;
+}
+
+.option-button.correct {
+    border-color: $light-blue;
+    color: $light-blue;
+    font-weight: 600;
+}
+
+.no-click {
+    opacity: 0.5;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.score-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  /* Remove all default borders */
+  .score-table th,
+  .score-table td {
+    border: none;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* Add a left border ONLY on the third (rightmost) cell */
+  .score-table th:nth-child(2),
+  .score-table td:nth-child(2) {
+    border-left: 2px solid $light-blue;
+    border-right: 2px solid $light-blue;
+  }
+  
+  .score-table tr:not(:last-child) td {
+    border-bottom: 2px solid $light-blue;
+  }
+
+  .score-table thead tr th {
+    border-bottom: 2px solid $light-blue;
+  }
