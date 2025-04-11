@@ -2,8 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-// const socket = io("http://localhost:5000"); // change to Render URL when deployed
-const socket = io("https://passoverquiz.onrender.com");
+const socket = io("http://localhost:5000"); // change to Render URL when deployed
 
 function Admin() {
     const [players, setPlayers] = useState([]);
