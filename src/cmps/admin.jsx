@@ -4,7 +4,7 @@ import io from "socket.io-client";
 
 //    10.0.0.6
 // const socket = io("http://localhost:5000"); // change to Render URL when deployed
-const socket = io("http://10.0.0.6:5000");
+const socket = io("http://192.168.68.123:3000");
 
 function Admin() {
     const [players, setPlayers] = useState([]);
