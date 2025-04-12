@@ -5,7 +5,7 @@ import Slide from "./slide";
 
 // const socket = io("http://localhost:5000");
 // const socket = io("http://10.0.0.6:5000");
-const socket = io("http://192.168.68.123:3000");
+const socket = io("http://192.168.68.123:5000");
 
 function Player() {
     const [username, setUsername] = useState("");
